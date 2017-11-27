@@ -14,14 +14,13 @@ class App extends Component {
             .then(res => res.json())
             .then(users => this.setState({ users }));
     }
-
+    
     render() {
         return (
             <div className="App">
                 <h1>Users</h1>
-                {this.state.users.map(users =>
-                    /*<div key={user.key}>{user.username}</div>*/
-                    <div key={users.key}> {this.state.users.username} </div>
+                {this.state.users.map(user =>
+                    <div key={user.id}>{user.username}</div>
                 )}
             </div>
         );
