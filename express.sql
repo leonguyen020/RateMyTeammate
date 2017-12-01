@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2017 at 04:42 PM
+-- Generation Time: Dec 01, 2017 at 03:50 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -31,16 +31,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `username` varchar(150) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `level` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'admin', '123123'),
-(2, 'leo', '123456789');
+INSERT INTO `user` (`id`, `username`, `password`, `email`, `level`) VALUES
+(3, 'guess', '987654321', 's3325238@rmit.edu.vn', 1),
+(4, 'Eloranker', '123123123', 'eloranker@gmail.com', 0),
+(5, 'guess_01', '987654321', 's3325238@rmit.edu.vn', 1);
 
 --
 -- Indexes for dumped tables
@@ -60,7 +63,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
