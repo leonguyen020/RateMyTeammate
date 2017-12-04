@@ -250,6 +250,7 @@ var style = {
 // // // For tables
 // //
 //
+// // Columns name
 const thArray = ["ID","Username","Email","Level","Action"];
 const tdArray = [
     [ "1" , "Dakota Rice" , "$36,738" , "Niger" , "Oud-Turnhout" ] ,

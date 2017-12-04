@@ -16,13 +16,12 @@ import './assets/sass/light-bootstrap-dashboard.css';
 import './assets/css/demo.css';
 import './assets/css/pe-icon-7-stroke.css';
 
-
-
-
 ReactDOM.render((
-    <BrowserRouter>
-        <Switch>
-            <Route path="/" name="Home" component={App}/>
-        </Switch>
-    </BrowserRouter>
+
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" name="Home" component={App}/>
+            </Switch>
+        </BrowserRouter>
+
 ),document.getElementById('root'));

@@ -12,10 +12,15 @@
     "react-bootstrap": "^0.31.1",
     "react-chartist": "^0.13.0",
     "react-dom": "^15.6.1",
+    "react-modal": "^3.1.6",
     "react-notification-system": "^0.2.15",
+    "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.1.2",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "react-validation": "^3.0.7",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

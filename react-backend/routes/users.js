@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var UserAction = require('../action/Users');
+var UserAction = require('../action/users');
 
 /* GET users listing. */
 // router.get('/', function(req, res, next) {
@@ -22,6 +22,7 @@ var UserAction = require('../action/Users');
 //     });
 // });
 
+// Get users either all or by ID
 router.get('/:id?',function(req,res,next){
     var id = req.params.id;
     if(id){
@@ -48,6 +49,7 @@ router.get('/:id?',function(req,res,next){
         });
     }
 });
+// Add new user
 router.post('/add',function(req,res,next){
     UserAction.addUsers(req.body,function(err,count){
         if(err)
@@ -59,9 +61,10 @@ router.post('/add',function(req,res,next){
         }
     });
 });
+// Delete user
 router.delete('/delete/:id',function(req,res,next){
     var id = req.params.id;
-    UserAction.deleteUsers(id,function(err,count){
+    UserAction.deleteUser(id,function(err,count){
         if(err)
         {
             res.json(err);
@@ -72,6 +75,7 @@ router.delete('/delete/:id',function(req,res,next){
         }
     });
 });
+// // Update user
 // router.put('/:id',function(req,res,next){
 //     var id = req.params.id;
 //     UserAction.updateUsers(id,req.body,function(err,rows){
