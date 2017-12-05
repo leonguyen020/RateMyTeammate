@@ -75,20 +75,27 @@ router.delete('/delete/:id',function(req,res,next){
         }
     });
 });
-// // Update user
-// router.put('/:id',function(req,res,next){
-//     var id = req.params.id;
-//     UserAction.updateUsers(id,req.body,function(err,rows){
-//
-//         if(err)
-//         {
-//             res.json(err);
-//         }
-//         else
-//         {
-//             res.json(rows);
-//         }
-//     });
-// });
+// Update user
+router.put('/edit/:id',function(req,res,next){
+    var id = req.params.id;
+    var data = [
+        username = req.body.username,
+        password = req.body.password,
+        email = req.body.email,
+        level = req.body.level
+    ];
+    UserAction.updateUsers(id,data,function(err,rows){
+        if(err)
+        {
+            res.json(err);
+        }
+        else
+        {
+            // res.send(JSON.stringify(rows));
+            res.json(rows);
+            // res.end(JSON.stringify(results));
+        }
+    });
+});
 
 module.exports = router;

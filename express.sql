@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2017 at 04:23 AM
+-- Generation Time: Dec 05, 2017 at 07:31 AM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -43,7 +43,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `level`) VALUES
 (3, 'Tester', '123123', 'eloranker@gmail.com', 1),
 (4, 'Guess', '123123', 'eloranker@gmail.com', 1),
-(5, 'My Ap', '123123', 'eloranker@gmail.com', 1),
+(5, 'admin', '987654321', 'admin@gmail.com', 1),
 (6, 'React Admin', '123123', 'eloranker@gmail.com', 0);
 
 --

@@ -13,8 +13,9 @@ var Users={
         return db.query("delete from user where id=?",[id],callback);
     }
     ,updateUsers:function(id,user,callback){
-        return db.query("update user set username=?,password=?,email=?,level=? where id=?",[user.username,user.password,,user.email,,user.level,id],callback);
+        return db.query('UPDATE user SET `username`=?,`password`=?,`email`=?,`level`=? where `id`=?', [user[0],user[1],user[2],user[3],id],callback);
     }
+    // {"username":"admin","password":987654321,"email":"admin@gmail.com","level":1}
 
 };
 module.exports=Users;

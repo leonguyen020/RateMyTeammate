@@ -144,7 +144,6 @@ class TableList extends Component {
                                                                        placeholder={this.state.username}
                                                                        name='username' validations={['required']}/>
                                                             </Col>
-                                                            <br/>
                                                             <Col md={6}>
                                                                 <label>Email</label>
                                                                 <input type="email"
