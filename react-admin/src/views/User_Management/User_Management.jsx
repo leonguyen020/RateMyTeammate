@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, Table } from 'react-bootstrap';
 import Modal from 'react-modal';
-import Validation from 'react-validation';
+// import Validation from 'react-validation';
 
 
 import Card from 'components/Card/Card.jsx';
-import {thArray, tdArray} from 'variables/Variables.jsx';
+import {thArray} from 'variables/Variables.jsx';
 
 const customStyles = {
     content : {
@@ -38,9 +38,15 @@ class TableList extends Component {
     openModal(user) {
         this.setState({
             modalIsOpen: true,
-            username: user.username,
-            email: user.email,
-            id: user.id
+            data:[
+
+            ]
+            // edit_username: user.username,
+            // edit_email: user.email,
+            // edit_level: user.level,
+            // id: user.id
+        },function () {
+            console.log(this.state);
         });
     }
     closeModal() {
@@ -108,7 +114,7 @@ class TableList extends Component {
                                         </thead>
                                         <tbody>
                                         {this.state.users.map(user =>
-                                            <tr>
+                                            <tr key={user.id}>
                                                 <td>{user.id}</td>
                                                 <td>{user.username}</td>
                                                 <td>{user.email}</td>
@@ -132,7 +138,7 @@ class TableList extends Component {
                                                 isOpen={this.state.modalIsOpen}
                                                 style={customStyles}
                                                 onRequestClose={this.closeModal}
-                                                contentLabel="Example Modal" >
+                                                contentLabel="Edit User" >
 
                                                 <form onSubmit={this.handleEdit} method="POST">
                                                     <Row>
@@ -142,16 +148,37 @@ class TableList extends Component {
                                                                 <input onChange={this.logChange}
                                                                        className="form-control"
                                                                        placeholder={this.state.username}
-                                                                       name='username' validations={['required']}/>
-                                                            </Col>
-                                                            <Col md={6}>
+                                                                       name='username'/>
+                                                                <label>Password</label>
+                                                                <input type="password"
+                                                                       onChange={this.logChange}
+                                                                       className="form-control"
+                                                                       value={this.state.password}
+                                                                       placeholder='****'
+                                                                       name='password'/>
                                                                 <label>Email</label>
                                                                 <input type="email"
                                                                        onChange={this.logChange}
                                                                        className="form-control"
                                                                        value={this.state.email}
+                                                                       placeholder="ABC"
+                                                                       name='email'/>
+                                                            </Col>
+                                                            <Col md={6}>
+                                                                <label>Status</label>
+                                                                <input type="email"
+                                                                       onChange={this.logChange}
+                                                                       className="form-control"
+                                                                       value={this.state.email}
                                                                        placeholder='email@email.com'
-                                                                       name='email' validations={['required', 'email']}/>
+                                                                       name='email'/>
+                                                                <label>Level</label>
+                                                                <input type="email"
+                                                                       onChange={this.logChange}
+                                                                       className="form-control"
+                                                                       value={this.state.email}
+                                                                       placeholder='email@email.com'
+                                                                       name='email'/>
                                                             </Col>
                                                             <br/>
                                                         </Col>

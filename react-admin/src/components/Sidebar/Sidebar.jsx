@@ -40,7 +40,7 @@ class Sidebar extends Component{
 
                         </a>
                         <a href="https://www.creative-tim.com" className="simple-text logo-normal">
-                            Rate Teammate
+                            Creative Tim
                         </a>
                     </div>
                 <div className="sidebar-wrapper">

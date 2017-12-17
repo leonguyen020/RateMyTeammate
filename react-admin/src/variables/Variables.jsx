@@ -1,4 +1,4 @@
-// import React, { Component } from 'react';
+
 //
 // //
 // // // For notifications
@@ -243,15 +243,14 @@ var style = {
             padding: 0
         }
     }
-};
+}
 
 //
 // //
 // // // For tables
 // //
 //
-// // Columns name
-const thArray = ["ID","Username","Email","Level","Action"];
+const thArray = ["ID","Name","Salary","Country","City"];
 const tdArray = [
     [ "1" , "Dakota Rice" , "$36,738" , "Niger" , "Oud-Turnhout" ] ,
     [ "2" , "Minerva Hooper" , "$23,789" , "Curaçao" , "Sinaai-Waas" ] ,
@@ -558,7 +557,7 @@ var legendBar = {
 
 module.exports = {
     style, // For notifications (App container and Notifications view)
-    thArray, tdArray, // For tables (User_Management view)
+    thArray, tdArray, // For tables (TableList view)
     iconsArray, // For icons (Icons view)
     dataPie, legendPie, dataSales, optionsSales, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
 };

@@ -102,7 +102,7 @@ Light Bootstrap Dashboard React
         ├── Notifications
         │   └── Notifications.jsx
         ├── TableList
-        │   └── User_Management.jsx
+        │   └── TableList.jsx
         ├── Typography
         │   └── Typography.jsx
         └── UserProfile
